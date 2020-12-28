@@ -1,0 +1,8 @@
+if [ "`uname -s`" = "Darwin" ]; then \
+   		install -m 755 -s cntlm /usr/sbin/cntlm; \
+   		install -m 644 doc/cntlm.1 /usr/share/man/man1/cntlm.1; \
+   		[ -f /etc/cntlm.conf -o -z "/etc" ] \
+      		|| install -m 600 doc/cntlm.conf /etc/cntlm.conf; \
+
+
+cntlm: Mach-O 64-bit executable x86_64
